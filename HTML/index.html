@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Attributes Örnekleri</title>
+</head>
+<!-- CSS Stil Tanımları -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 80%;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    p {
+        color: #666;
+        line-height: 1.6;
+    }
+</style>
+
+<body>
+
+    <!-- id özniteliği ile bir kimlik belirtme -->
+    <div id="main-content">
+        <h1>Global Attributes Örnekleri</h1>
+        <p>Bu dosyada HTML'nin global özniteliklerini kullanarak örnekler bulunmaktadır.</p>
+    </div>
+
+    <!-- class özniteliği ile bir sınıf belirtme -->
+    <div class="container">
+        <p>Bu div bir sınıf olan "container" sınıfına sahiptir. CSS ile özelleştirilebilir.</p>
+    </div>
+
+    <!-- style özniteliği ile içeriğe doğrudan CSS stili ekleme -->
+    <p style="color: red; font-size: 18px;">Bu paragraf, içeriğe doğrudan kırmızı renk ve 18 piksel font boyutu uygular.
+    </p>
+
+    <!-- title özniteliği ile bir element için açıklama ekleme -->
+    <img src="image.jpg" alt="Resim" title="Güzel Bir Manzara">
+
+    <!-- lang özniteliği ile içeriğin dilini belirleme -->
+    <p lang="tr">Bu paragrafın içeriği Türkçe olarak belirtilmiştir.</p>
+
+    <!-- tabindex özniteliği ile klavye ile gezinme sırasını belirleme -->
+    <a href="#" tabindex="1">İlk link</a>
+    <a href="#" tabindex="2">İkinci link</a>
+
+    <!-- accesskey özniteliği ile bir klavye kısayolu tanımlama -->
+    <button accesskey="s">Kaydet</button>
+
+    <!-- contenteditable özniteliği ile içeriğin düzenlenebilirliğini belirleme -->
+    <div contenteditable="true">
+        Bu içerik düzenlenebilirdir.
+    </div>
+
+    <!-- hidden özniteliği ile bir elementi gizleme -->
+    <div hidden>
+        Bu element, sayfa yüklendiğinde gizlenir.
+    </div>
+
+</body>
+
+</html>
