@@ -1,4 +1,7 @@
-## JavaScript Hakkında Bilinmesi Gerekenler
+![JavaScript]([http://url/to/img.png](https://icons.veryicon.com/png/o/business/vscode-program-item-icon/javascript-3.png))
+
+
+# JavaScript Hakkında Bilinmesi Gerekenler
 
 JavaScript, web'in temel dillerinden biridir ve interaktif web sayfaları oluşturmak için kullanılır. JavaScript hakkında bilinmesi gereken birçok şey var, ancak başlamak için en önemlileri şunlardır:
 
