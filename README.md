@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <img src="img\javascript-3-256.png" alt="JavaScript" >
 
 # JavaScript Hakkında Bilinmesi Gerekenler
