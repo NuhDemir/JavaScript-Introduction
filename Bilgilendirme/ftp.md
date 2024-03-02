@@ -22,6 +22,49 @@ JavaScript, FTP'yi daha interaktif ve kullanımı kolay hale getirmek için kull
 * **Dosya ilerleme göstergesi:** Kullanıcılara dosya yükleme ve indirme ilerlemesini gösteren bir gösterge oluşturur.
 * **Dosya listesi:** Bir FTP sunucusundaki dosyaların listesini dinamik olarak oluşturur.
 
+
+
+FTP, dosyaları bir bilgisayardan diğerine aktarmak için kullanılan bir protokole verilen isimdir. Bu protokolü kullanabilmek için ise iki önemli bileşen vardır: **FTP istemcisi** ve **FTP sunucusu**.
+
+**1. FTP İstemcisi (Client):**
+
+* Kullanıcıların dosyaları yönetmek ve aktarmak için kullandığı bir yazılımdır.
+* Birçok farklı FTP istemcisi mevcuttur ve bunlar genellikle ücretsiz olarak kullanılabilir.
+* Örnekler: FileZilla, WinSCP, Cyberduck
+
+**FTP istemcisinin özellikleri:**
+
+* **Kullanıcı arayüzü:** Dosyaları kolayca görüntülemek, seçmek ve aktarmak için bir arayüz sunar.
+* **Bağlantı kurma:** FTP sunucusuna bağlanmak için kullanıcı adı ve parola gibi bilgileri girmenizi sağlar.
+* **Dosya transferi:** Dosyaları FTP sunucusuna yüklemek veya indirmek için izin verir.
+* **Dosya yönetimi:** FTP sunucusundaki dosyaları silmek, yeniden adlandırmak ve klasör oluşturmak gibi işlemleri gerçekleştirmeyi sağlar.
+
+**2. FTP Sunucusu (Server):**
+
+* Dosyaları depolamak için kullanılan bir yazılım veya donanımdır.
+* Genellikle web sunucuları gibi diğer hizmetlerin yanı sıra çalışır. 
+* Erişim kontrolü sağlayan güvenlik özellikleri sunar.
+
+**FTP sunucusunun özellikleri:**
+
+* **Dosya depolama:** Dosyaları güvenli bir şekilde saklar.
+* **Erişim kontrolü:** Kullanıcıların sunucuya kimlerin ve hangi yetkilerle erişebileceğini belirler.
+* **Transfer protokolü:** FTP protokolünü kullanarak dosya transferi sağlar.
+* **Güvenlik:** Dosyaları yetkisiz erişime karşı korumak için şifreleme gibi güvenlik özellikleri sunabilir.
+
+**FTP'nin Kullanım Alanları:**
+
+* Web sitelerinin dosyalarını bir web sunucusuna yüklemek
+* Dosyaları bir bilgisayardan diğerine aktarmak
+* Yedekleme yapmak
+
+**Özet:**
+
+* **FTP istemcisi:** Dosyaları yönetmek ve aktarmak için kullanıcıların kullandığı bir yazılım.
+* **FTP sunucusu:** Dosyaları depolamak için kullanılan bir yazılım veya donanım.
+
+Her ikisi de bir arada çalışarak dosyaların güvenli ve kolay bir şekilde aktarılmasını sağlar.
+
 **JavaScript Örnekleri:**
 
 **1. Sürükle ve Bırak Dosya Yükleme:**
