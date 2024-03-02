@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-<img src="img\javascript-3-256.png" alt="JavaScript" width="320" height="180">
+<img src="img\javascript-3-256.png" alt="JavaScript" >
 
 # JavaScript Hakkında Bilinmesi Gerekenler
 >>>>>>> e5cfd40092f1dbada2b281dac598ca8ce5fb7e6f
