@@ -83,113 +83,113 @@
 |application/x-msdos-program|	    com|
 |/x-msdos-program|	    exe|
 |application/x-netcdf|	        cdf|
-|application/x-netcdf	        nc|
-|application/x-perl	            pl|
-|application/x-perl	            pm|
-|application/x-rar-compressed	rar|
-|application/x-sh	            sh|
-|application/x-shar	            shar|
-|application/x-shockwave-flash	swf|
-|/x-stuffit	        sit|
-|/x-sv4cpio	        sv4cpio|
-|application/x-sv4crc	        sv4crc|
-|application/x-tar-gz	        tar.gz|
-|application/x-tar-gz	        tgz|
-|application/x-tar	            tar|
-|application/x-tcl	            tcl|
-|application/x-tex	            tex|
-|application/x-texinfo	        texi|
-|application/x-texinfo	        texinfo|
-|application/x-troff-man	        man|
-|application/x-troff-me	        me|
-|/x-troff-ms	        ms|
-|application/x-troff	            roff|
-|application/x-troff	            t|
-|application/x-troff         	tr|
-|/x-ustar	            ustar||
-|application/x-wais-source	    src|
-|application/x-zip-compressed	zip|
-|application/zip	                zip|
-|audio/TSP-audio	                tsi|
-|audio/basic	                    au|
-|audio/basic	                    snd|
-|audio/midi	                    kar|
-|audio/midi	                    mid|
-|/midi	                    midi|
-|audio/mpeg	                    mp2|
-|audio/mpeg	                    mp3|
+|application/x-netcdf|	        nc|
+|application/x-perl|	            pl|
+|application/x-perl|	            pm|
+|application/x-rar-compressed|	rar|
+|application/x-sh|	            sh|
+|application/x-shar	|            shar|
+|application/x-shockwave-flash|	swf|
+|/x-stuffit|	        sit|
+|/x-sv4cpio|	        sv4cpio|
+|application/x-sv4crc|	        sv4crc|
+|application/x-tar-gz|	        tar.gz|
+|application/x-tar-gz|	        tgz|
+|application/x-tar|	            tar|
+|application/x-tcl|	            tcl|
+|application/x-tex|	            tex|
+|application/x-texinfo|	        texi|
+|application/x-texinfo|	        texinfo|
+|application/x-troff-man|	        man|
+|application/x-troff-me|	        me|
+|/x-troff-ms|	        ms|
+|application/x-troff|	            roff|
+|application/x-troff|	            t|
+|application/x-troff|         	tr|
+|/x-ustar|	            ustar||
+|application/x-wais-source|	    src|
+|application/x-zip-compressed|	zip|
+|application/zip|	                zip|
+|audio/TSP-audio|	                tsi|
+|audio/basic|	                    au|
+|audio/basic|	                    snd|
+|audio/midi	|                    kar|
+|audio/midi|	                    mid|
+|/midi	 |                   midi|
+|audio/mpeg	|                    mp2|
+|audio/mpeg|	                    mp3|
 |audio/mpeg	                    mpga|
-|audio/ulaw	                    au|
-|audio/x-aiff	                aif||
-|audio/x-aiff	                aifc|
-|audio/x-aiff	                aiff|
-|audio/x-mpegurl	                m3u|
-|audio/x-ms-wax	                wax|
-|audio/x-ms-wma              	wma|
-|audio/x-pn-realaudio-plugin	    rpm|
-|audio/x-pn-realaudio	        ram|
-|audio/x-pn-realaudio	        rm|
-|audio/x-realaudio	            ra|
-|audio/x-wav	                    wav|
-|chemical/x-pdb	                pdb|
-|chemical/x-pdb	                xyz|
-|image/cmu-raster	            ras|
-|image/gif	                    gif|
-|image/ief	                    ief|
-|image/jpeg	                    jpe|
-|image/jpeg	                    jpeg|
-|image/jpeg                  	jpg|
-|/png                   	png|
-|image/tiff                  	tif tiff|
-|image/tiff	                    tif|
-|image/tiff                  	tiff|
-|image/x-cmu-raster	            ras|
-|image/x-portable-anymap	        pnm|
-|image/x-portable-bitmap	        pbm|
-|image/x-portable-graymap	    pgm|
-|image/x-portable-pixmap	        ppm|
-|image/x-rgb	                    rgb|
-|image/x-xbitmap	                xbm|
-|image/x-xpixmap             	xpm|
-|image/x-xwindowdump	            xwd|
-|model/iges	                    iges|
-|model/iges                   	igs|
-|model/mesh                  	mesh|
-|model/mesh                  	msh|
-|model/mesh                  	silo|
-|model/vrml                  	vrml|
-|model/vrml                  	wrl|
-|text/css                    	css|
-|text/html	                    htm|
-|text/html	                    html htm|
-|text/html	                    html|
-|text/plain	                    asc txt|
-||text/plain	                    asc|
-|text/plain	                    c|
-|text/plain	                    cc|
-|text/plain                  	f90|
-|text/plain                  	f|
-|text/plain                  	h|
-|text/plain	                    hh|
-|text/plain	                    m|
-|text/plain	                    txt|
-|text/richtext               	rtx|
-|text/rtf	                    rtf|
-|text/sgml	                    sgm|
-|text/sgml	                    sgml|
-|text/tab-separated-values	    tsv|
-|text/vnd.sun.j2me.app-descriptor jad|
-|text/x-setext	                etx|
-|text/xml	                    xml|
-|video/dl	                    dl|
-|video/fli	                    fli|
-|video/flv	                    flv|
-|video/gl	                    gl|
-|video/mpeg	                    mp2|
-|video/mp4	                    mp4|
-|video/mpeg	                    mpe|
-|video/mpeg              	    mpeg|
-|video/mpeg              	    mpg|
+|audio/ulaw	 |                   au|
+|audio/x-aiff|	                aif||
+|audio/x-aiff|	                aifc|
+|audio/x-aiff|	                aiff|
+|audio/x-mpegurl|	                m3u|
+|audio/x-ms-wax	 |               wax|
+|audio/x-ms-wma|              	wma|
+|audio/x-pn-realaudio-plugin|	    rpm|
+|audio/x-pn-realaudio|	        ram|
+|audio/x-pn-realaudio|	        rm|
+|audio/x-realaudio	|            ra|
+|audio/x-wav|	                    wav|
+|chemical/x-pdb	|                pdb|
+|chemical/x-pdb	|                xyz|
+|image/cmu-raster|	            ras|
+|image/gif	|                    gif|
+|image/ief|	                    ief|
+|image/jpeg	|                    jpe|
+|image/jpeg	|                    jpeg|
+|image/jpeg |                 	jpg|
+|/png  |                 	png|
+|image/tiff|                  	tif tiff|
+|image/tiff|	                    tif|
+|image/tiff |                 	tiff|
+|image/x-cmu-raster	|            ras|
+|image/x-portable-anymap|	        pnm|
+|image/x-portable-bitmap|	        pbm|
+|image/x-portable-graymap|	    pgm|
+|image/x-portable-pixmap|	        ppm|
+|image/x-rgb	|                    rgb|
+|image/x-xbitmap|	                xbm|
+|image/x-xpixmap |            	xpm|
+|image/x-xwindowdump|	            xwd|
+|model/iges	|                    iges|
+|model/iges |                  	igs|
+|model/mesh |                 	mesh|
+|model/mesh |                 	msh|
+|model/mesh|                  	silo|
+|model/vrml |                 	vrml|
+|model/vrml |                 	wrl|
+|text/css   |                 	css|
+|text/html	|                    htm|
+|text/html	|                    html htm|
+|text/html	|                    html|
+|text/plain	 |                   asc txt|
+||text/plain|	                    asc|
+|text/plain	 |                   c|
+|text/plain	|                    cc|
+|text/plain |                 	f90|
+|text/plain |                 	f|
+|text/plain |                 	h|
+|text/plain	|                    hh|
+|text/plain|	                    m|
+|text/plain	|                    txt|
+|text/richtext  |             	rtx|
+|text/rtf	|                    rtf|
+|text/sgml|	                    sgm|
+|text/sgml	|                    sgml|
+|text/tab-separated-values|	    tsv|
+|text/vnd.sun.j2me.app-descriptor| jad|
+|text/x-setext	|                etx|
+|text/xml	 |                   xml|
+|video/dl	|                    dl|
+|video/fli	 |                   fli|
+|video/flv	|                    flv|
+|video/gl|	                    gl|
+|video/mpeg|	                    mp2|
+|video/mp4	|                    mp4|
+|video/mpeg|	                    mpe|
+|video/mpeg |             	    mpeg|
+|video/mpeg |             	    mpg|
 |video/quicktime|         	    mov|
 |video/quicktime|         	    qt|
 |video/vnd.vivo |viv|
