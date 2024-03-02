@@ -77,3 +77,4 @@ JavaScript'i öğrenmek için birçok kaynak mevcuttur. İşte size birkaç öne
 
 **En önemlisi, sabırlı olun ve pratik yapmaya devam edin. JavaScript'i öğrenmek zaman ve emek ister, ancak ödüllendirici bir deneyimdir.**
  
+[Debugger][JavaScript-exercises\a-9-debugger]
