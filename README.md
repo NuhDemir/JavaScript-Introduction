@@ -1,7 +1,7 @@
 <img src="img\javascript-3-256.png" alt="JavaScript" >
 
 # JavaScript Hakkında Bilinmesi Gerekenler
->>>>>>> e5cfd40092f1dbada2b281dac598ca8ce5fb7e6f
+
 
 JavaScript, web'in temel dillerinden biridir ve interaktif web sayfaları oluşturmak için kullanılır. JavaScript hakkında bilinmesi gereken birçok şey var, ancak başlamak için en önemlileri şunlardır:
 
