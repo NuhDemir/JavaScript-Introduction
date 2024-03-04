@@ -24,3 +24,16 @@ var result = a >> 1; // 0010
 var result = a >>> 2; //0010
 
 
+// *&&:VE operatorü
+//true && true : true
+//true && false : false
+//true && true && true : true
+//false && false && false : false
+//*||:VEYA operatorü
+//true || true : true
+//true || false : true
+// false || false : false
+//true || true || false : true
+//* !: Değil operatorü
+// true! : false
+// false! : true

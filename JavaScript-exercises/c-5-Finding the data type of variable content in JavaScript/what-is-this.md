@@ -50,4 +50,3 @@ selamla(10); // "Hata: İsim metin türünde olmalı!" yazdırır
 
 * JavaScript Veri Türleri: [https://www.w3schools.com/js/js_datatypes.asp](https://www.w3schools.com/js/js_datatypes.asp)
 * typeof Operatörü: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
-
