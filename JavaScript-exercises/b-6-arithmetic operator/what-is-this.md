@@ -1,3 +1,8 @@
+## JavaScript Aritmetik Operatörleri
+
+JavaScript'te, sayılar üzerinde matematiksel işlemler gerçekleştirmek için kullanılan bir dizi aritmetik operatör bulunur. Bu operatörler, iki veya daha fazla operant (değer veya değişken) üzerinde işlem yapar ve sonucu bir değer olarak döndürür.
+
+**Aritmetik Operatörler:**
 
 * `+`: Toplama operatörü. İki operantı toplar ve sonucu döndürür.
 * `-`: Çıkarma operatörü. Soldaki operanttan sağdaki operantı çıkarır ve sonucu döndürür.
