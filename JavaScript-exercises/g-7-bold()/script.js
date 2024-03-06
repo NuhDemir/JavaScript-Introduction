@@ -1,13 +1,9 @@
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const title = "JavaScript Öğreniyorum";
+const boldTitle = title.bold();
 
-document.write(heart); // "♥"
-document.write(euro); // "€"
+document.getElementsByTagName("h1")[0].innerHTML = boldTitle;
 
-const char = String.fromCharCode(77);
+const importantText = "Dikkat: Bu önemli bir bilgidir!";
+const boldImportantText = importantText.bold();
 
-document.write(char); // "M"
-
-const str = String.fromCharCode(65, 66, 67);
-
-document.write(str); // "ABC"
+document.getElementById("important").innerHTML = boldImportantText;

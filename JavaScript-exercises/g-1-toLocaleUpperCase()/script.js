@@ -1,13 +1,13 @@
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const username1 = "johndoe";
+const username2 = "JohnDoe";
 
-document.write(heart); // "♥"
-document.write(euro); // "€"
+if (username1.toLocaleUpperCase() === username2.toLocaleUpperCase()) {
+  // Kullanıcı adları eşleşir. (Türkçe locale için)
+}
 
-const char = String.fromCharCode(77);
+// Farklı bir locale için:
+const locale = "en-US";
 
-document.write(char); // "M"
-
-const str = String.fromCharCode(65, 66, 67);
-
-document.write(str); // "ABC"
+if (username1.toLocaleUpperCase(locale) === username2.toLocaleUpperCase(locale)) {
+  // Kullanıcı adları eşleşir. (İngilizce locale için)
+}

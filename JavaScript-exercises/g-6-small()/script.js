@@ -1,13 +1,9 @@
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const imageTitle = "Bu bir resimdir";
+const smallImageTitle = imageTitle.small();
 
-document.write(heart); // "♥"
-document.write(euro); // "€"
+document.getElementById("image-title").innerHTML = smallImageTitle;
 
-const char = String.fromCharCode(77);
+const footnoteText = "Bu metin bir dipnottur.";
+const smallFootnoteText = footnoteText.small();
 
-document.write(char); // "M"
-
-const str = String.fromCharCode(65, 66, 67);
-
-document.write(str); // "ABC"
+document.getElementById("footnote").innerHTML = smallFootnoteText;

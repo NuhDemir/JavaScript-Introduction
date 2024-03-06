@@ -1,59 +1,69 @@
-## JavaScript Dilinde fromCharCode() Metodu
+## JavaScript Dilinde toLowerCase() Metodu
 
-**fromCharCode()** metodu, bir veya birden fazla Unicode kodundan bir dize oluşturmanızı sağlar.
+**Amaç:** Bir metnin tüm harflerini küçük harfe dönüştürmek.
 
 **Kullanım Alanları:**
 
-* Özel karakterler ve semboller oluşturmak
-* Metin işleme ve manipülasyonu
-* Uluslararası metinlerle çalışma
-* Kodlama ve şifreleme
+* Metinleri küçük harfe çevirmek
+* Form verilerini küçük harfe çevirmek
+* URL'leri küçük harfe çevirmek
+* Karşılaştırma işlemlerinde büyük/küçük harf hassasiyetini ortadan kaldırmak
 
 **Çalışma Mantığı:**
 
-**fromCharCode()** metodu, parametre olarak verilen Unicode kodlarını bir dizeye dönüştürür. Her bir Unicode kodu, bir karaktere karşılık gelir.
+**toLowerCase()** metodu, bir metnin tüm harflerini Unicode karakter kodlarına göre küçük harf eşdeğerlerine dönüştürür.
 
-**Detaylı Örnekler:**
+**Kodlama Örnekleri:**
 
-**1. Örnek:** Tek bir Unicode kodundan bir karakter oluşturmak
-
-```javascript
-const char = String.fromCharCode(77);
-
-console.log(char); // "M"
-```
-
-Bu örnekte, **fromCharCode()** metodu 77 Unicode kodunu kullanarak "M" karakterini oluşturur.
-
-**2. Örnek:** Birden fazla Unicode kodundan bir dize oluşturmak
+**1. Metni Küçük Harfe Çevirmek:**
 
 ```javascript
-const str = String.fromCharCode(65, 66, 67);
+const text = "MERHABA DÜNYA!";
+const lowerCaseText = text.toLowerCase();
 
-console.log(str); // "ABC"
+console.log(lowerCaseText); // Yazdırır: "merhaba dünya!"
 ```
 
-Bu örnekte, **fromCharCode()** metodu 65, 66 ve 67 Unicode kodlarını kullanarak "ABC" dizesini oluşturur.
-
-**Ek Örnekler:**
+**2. Form Verisini Küçük Harfe Çevirmek:**
 
 ```javascript
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const formValue = document.getElementById("name").value;
+const lowerCaseValue = formValue.toLowerCase();
 
-console.log(heart); // "♥"
-console.log(euro); // "€"
+// ...
 ```
 
-**Notlar:**
-
-* **fromCharCode()** metodu, parametre olarak verilen Unicode kodunun geçerli bir karakter olması gerekir. Geçersiz bir Unicode kodu verilirse, NaN değeri döndürülür.
-* **fromCharCode()** metodu, birden fazla parametre alırsa, parametreler sırayla bir dizeye dönüştürülür.
-
-**Geçersiz Unicode kodu ile fromCharCode() örneği:**
+**3. URL'yi Küçük Harfe Çevirmek:**
 
 ```javascript
-const str = String.fromCharCode(100000);
+const url = "HTTPS://WWW.EXAMPLE.COM/";
+const lowerCaseUrl = url.toLowerCase();
 
-console.log(str); // NaN
+console.log(lowerCaseUrl); // Yazdırır: "https://www.example.com/"
 ```
+
+**4. Karşılaştırma İşlemlerinde Büyük/Küçük Harf Hassasiyetini Ortadan Kaldırmak:**
+
+```javascript
+const username1 = "johndoe";
+const username2 = "JohnDoe";
+
+if (username1.toLowerCase() === username2.toLowerCase()) {
+  // Kullanıcı adları eşleşir.
+}
+```
+
+**Özet:**
+
+| Özellik | Açıklama |
+|---|---|
+| **Amaç** | Bir metnin tüm harflerini küçük harfe dönüştürmek. |
+| **Kullanım Alanları** | Metinleri küçük harfe çevirmek, form verilerini küçük harfe çevirmek, URL'leri küçük harfe çevirmek, karşılaştırma işlemlerinde büyük/küçük harf hassasiyetini ortadan kaldırmak |
+| **Çalışma Mantığı** | Bir metnin tüm harflerini Unicode karakter kodlarına göre küçük harf eşdeğerlerine dönüştürür. |
+
+**Ek Bilgiler:**
+
+* **toLowerCase()** metodu, locale bilgisini dikkate almaz.
+* Küçük harf eşdeğeri olmayan karakterler olduğu gibi bırakılır.
+
+Umarım bu bilgiler JavaScript'te **toLowerCase()** metodunu anlamanıza yardımcı olmuştur.

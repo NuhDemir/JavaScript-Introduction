@@ -1,15 +1,5 @@
-const day = "Pazartesi";
+const age = 18;
 
-switch (day) {
-  case "Pazartesi":
-    console.log("Haftanın ilk günü!");
-    break;
-  case "Salı":
-    console.log("Haftanın ikinci günü.");
-    break;
-  case "Çarşamba":
-    console.log("Haftanın üçüncü günü.");
-    break;
-  default:
-    console.log("Geçersiz gün ismi!");
-}
+const isAdult = age >= 18 ? "Yetişkin" : "Çocuk";
+
+document.write(isAdult); // "Yetişkin" yazdırır

@@ -1,59 +1,43 @@
-## JavaScript Dilinde fromCharCode() Metodu
+## JavaScript Dilinde strike() Metodu
 
-**fromCharCode()** metodu, bir veya birden fazla Unicode kodundan bir dize oluşturmanızı sağlar.
+**strike()** metodu, JavaScript'te **mevcut değildir**. 
 
-**Kullanım Alanları:**
+**Benzer İşlev Gösteren Metotlar:**
 
-* Özel karakterler ve semboller oluşturmak
-* Metin işleme ve manipülasyonu
-* Uluslararası metinlerle çalışma
-* Kodlama ve şifreleme
+**1. strikethrough():** Bir metnin üzerini çizmek için kullanılır.
 
-**Çalışma Mantığı:**
+**2. textDecoration:** CSS'nin `text-decoration` özelliğini kullanarak metnin üzerini çizmek için kullanılır.
 
-**fromCharCode()** metodu, parametre olarak verilen Unicode kodlarını bir dizeye dönüştürür. Her bir Unicode kodu, bir karaktere karşılık gelir.
-
-**Detaylı Örnekler:**
-
-**1. Örnek:** Tek bir Unicode kodundan bir karakter oluşturmak
+**Örnek:**
 
 ```javascript
-const char = String.fromCharCode(77);
+const text = "Merhaba Dünya!";
 
-console.log(char); // "M"
+// strikethrough() kullanımı
+const strikethroughText = text.strikethrough();
+
+// textDecoration kullanımı
+const strikethroughText2 = text.style.textDecoration = "line-through";
+
+console.log(strikethroughText); // Yazdırır: "<strike>Merhaba Dünya!</strike>"
+console.log(strikethroughText2); // Yazdırır: "Merhaba Dünya!" (üzeri çizili olarak)
 ```
 
-Bu örnekte, **fromCharCode()** metodu 77 Unicode kodunu kullanarak "M" karakterini oluşturur.
+**Özet:**
 
-**2. Örnek:** Birden fazla Unicode kodundan bir dize oluşturmak
+| Metod | Etki | HTML Etiketi | CSS Özelliği |
+|---|---|---|---|
+| **strikethrough()** | Metnin üzerini çizmek | `<strike>` | Yok |
+| **textDecoration** | Metnin üzerini çizmek | Yok | `text-decoration: line-through;` |
 
-```javascript
-const str = String.fromCharCode(65, 66, 67);
+**Not:**
 
-console.log(str); // "ABC"
-```
+* **strikethrough()** metodu, modern tarayıcılarda pek kullanılmamaktadır.
+* **textDecoration** özelliği daha modern ve esnek bir çözümdür.
 
-Bu örnekte, **fromCharCode()** metodu 65, 66 ve 67 Unicode kodlarını kullanarak "ABC" dizesini oluşturur.
+**Ek Bilgiler:**
 
-**Ek Örnekler:**
+* Yukarıdaki metotlara ek olarak, metnin üzerini çizmek için `<s>` etiketi ve CSS'nin `text-decoration-line` özelliği de kullanılabilir. 
+* Fakat bu yöntemler metnin üzerini çizmenin en doğru ve modern yöntemi değildir.
 
-```javascript
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
-
-console.log(heart); // "♥"
-console.log(euro); // "€"
-```
-
-**Notlar:**
-
-* **fromCharCode()** metodu, parametre olarak verilen Unicode kodunun geçerli bir karakter olması gerekir. Geçersiz bir Unicode kodu verilirse, NaN değeri döndürülür.
-* **fromCharCode()** metodu, birden fazla parametre alırsa, parametreler sırayla bir dizeye dönüştürülür.
-
-**Geçersiz Unicode kodu ile fromCharCode() örneği:**
-
-```javascript
-const str = String.fromCharCode(100000);
-
-console.log(str); // NaN
-```
+Umarım bu bilgiler JavaScript'te metnin üzerini çizme konusunda size yardımcı olmuştur.

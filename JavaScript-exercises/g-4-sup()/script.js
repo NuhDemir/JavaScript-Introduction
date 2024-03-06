@@ -1,13 +1,10 @@
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const degreeSymbol = "°";
+const supDegreeSymbol = degreeSymbol.sup();
 
-document.write(heart); // "♥"
-document.write(euro); // "€"
+console.log(supDegreeSymbol); // Yazdırır: "°" (Üst simge olarak)
 
-const char = String.fromCharCode(77);
+const x = 2;
+const y = 3;
+const supText = `x^${y}`;
 
-document.write(char); // "M"
-
-const str = String.fromCharCode(65, 66, 67);
-
-document.write(str); // "ABC"
+console.log(supText); // Yazdırır: "x³"

@@ -1,59 +1,57 @@
-## JavaScript Dilinde fromCharCode() Metodu
+## JavaScript Dilinde small() Metodu
 
-**fromCharCode()** metodu, bir veya birden fazla Unicode kodundan bir dize oluşturmanızı sağlar.
+**Amaç:** Bir metni küçültmek.
 
 **Kullanım Alanları:**
 
-* Özel karakterler ve semboller oluşturmak
-* Metin işleme ve manipülasyonu
-* Uluslararası metinlerle çalışma
-* Kodlama ve şifreleme
+* Metni daha az önemli göstermek
+* Açıklama metinleri oluşturmak
+* Dipnotlar ve referanslar için metin oluşturmak
 
 **Çalışma Mantığı:**
 
-**fromCharCode()** metodu, parametre olarak verilen Unicode kodlarını bir dizeye dönüştürür. Her bir Unicode kodu, bir karaktere karşılık gelir.
+**small()** metodu, bir metni HTML `<small>` etiketiyle sararak küçültür.
 
-**Detaylı Örnekler:**
+**Kodlama Örnekleri:**
 
-**1. Örnek:** Tek bir Unicode kodundan bir karakter oluşturmak
-
-```javascript
-const char = String.fromCharCode(77);
-
-console.log(char); // "M"
-```
-
-Bu örnekte, **fromCharCode()** metodu 77 Unicode kodunu kullanarak "M" karakterini oluşturur.
-
-**2. Örnek:** Birden fazla Unicode kodundan bir dize oluşturmak
+**1. Metni Daha Az Önemli Göstermek:**
 
 ```javascript
-const str = String.fromCharCode(65, 66, 67);
+const text = "Merhaba Dünya!";
+const smallText = text.small();
 
-console.log(str); // "ABC"
+console.log(smallText); // Yazdırır: "<small>Merhaba Dünya!</small>"
 ```
 
-Bu örnekte, **fromCharCode()** metodu 65, 66 ve 67 Unicode kodlarını kullanarak "ABC" dizesini oluşturur.
-
-**Ek Örnekler:**
+**2. Açıklama Metinleri Oluşturmak:**
 
 ```javascript
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const imageTitle = "Bu bir resimdir";
+const smallImageTitle = imageTitle.small();
 
-console.log(heart); // "♥"
-console.log(euro); // "€"
+document.getElementById("image-title").innerHTML = smallImageTitle;
 ```
 
-**Notlar:**
-
-* **fromCharCode()** metodu, parametre olarak verilen Unicode kodunun geçerli bir karakter olması gerekir. Geçersiz bir Unicode kodu verilirse, NaN değeri döndürülür.
-* **fromCharCode()** metodu, birden fazla parametre alırsa, parametreler sırayla bir dizeye dönüştürülür.
-
-**Geçersiz Unicode kodu ile fromCharCode() örneği:**
+**3. Dipnotlar ve Referanslar için Metin Oluşturmak:**
 
 ```javascript
-const str = String.fromCharCode(100000);
+const footnoteText = "Bu metin bir dipnottur.";
+const smallFootnoteText = footnoteText.small();
 
-console.log(str); // NaN
+document.getElementById("footnote").innerHTML = smallFootnoteText;
 ```
+
+**Özet:**
+
+| Özellik | Açıklama |
+|---|---|
+| **Amaç** | Bir metni küçültmek. |
+| **Kullanım Alanları** | Metni daha az önemli göstermek, açıklama metinleri oluşturmak, dipnotlar ve referanslar için metin oluşturmak |
+| **Çalışma Mantığı** | Bir metni HTML `<small>` etiketiyle sararak küçültür. |
+
+**Ek Bilgiler:**
+
+* **small()** metodu, CSS'nin `font-size` özelliğini kullanarak da yazı tipi boyutunu değiştirebilirsiniz.
+* **small()** metodu, modern tarayıcılarda pek kullanılmamaktadır.
+
+Umarım bu bilgiler JavaScript'te **small()** metodunu anlamanıza yardımcı olmuştur.

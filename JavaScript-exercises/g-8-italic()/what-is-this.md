@@ -1,59 +1,66 @@
-## JavaScript Dilinde fromCharCode() Metodu
+## JavaScript Dilinde italic() Metodu
 
-**fromCharCode()** metodu, bir veya birden fazla Unicode kodundan bir dize oluşturmanızı sağlar.
+**Amaç:** Bir metni italik yapmak.
 
 **Kullanım Alanları:**
 
-* Özel karakterler ve semboller oluşturmak
-* Metin işleme ve manipülasyonu
-* Uluslararası metinlerle çalışma
-* Kodlama ve şifreleme
+* Metni vurgulamak
+* Özel metinler oluşturmak
+* Kitap isimleri ve alıntıları için metin oluşturmak
 
 **Çalışma Mantığı:**
 
-**fromCharCode()** metodu, parametre olarak verilen Unicode kodlarını bir dizeye dönüştürür. Her bir Unicode kodu, bir karaktere karşılık gelir.
+**italic()** metodu, bir metni HTML `<i>` etiketiyle sararak italik yapar.
 
-**Detaylı Örnekler:**
+**Kodlama Örnekleri:**
 
-**1. Örnek:** Tek bir Unicode kodundan bir karakter oluşturmak
-
-```javascript
-const char = String.fromCharCode(77);
-
-console.log(char); // "M"
-```
-
-Bu örnekte, **fromCharCode()** metodu 77 Unicode kodunu kullanarak "M" karakterini oluşturur.
-
-**2. Örnek:** Birden fazla Unicode kodundan bir dize oluşturmak
+**1. Metni Vurgulamak:**
 
 ```javascript
-const str = String.fromCharCode(65, 66, 67);
+const text = "Merhaba Dünya!";
+const italicText = text.italic();
 
-console.log(str); // "ABC"
+console.log(italicText); // Yazdırır: "<i>Merhaba Dünya!</i>"
 ```
 
-Bu örnekte, **fromCharCode()** metodu 65, 66 ve 67 Unicode kodlarını kullanarak "ABC" dizesini oluşturur.
-
-**Ek Örnekler:**
+**2. Özel Metinler Oluşturmak:**
 
 ```javascript
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const quote = "Hayat kısa, sanat uzun.";
+const italicQuote = quote.italic();
 
-console.log(heart); // "♥"
-console.log(euro); // "€"
+document.getElementById("quote").innerHTML = italicQuote;
 ```
 
-**Notlar:**
-
-* **fromCharCode()** metodu, parametre olarak verilen Unicode kodunun geçerli bir karakter olması gerekir. Geçersiz bir Unicode kodu verilirse, NaN değeri döndürülür.
-* **fromCharCode()** metodu, birden fazla parametre alırsa, parametreler sırayla bir dizeye dönüştürülür.
-
-**Geçersiz Unicode kodu ile fromCharCode() örneği:**
+**3. Kitap İsimleri ve Alıntılar için Metin Oluşturmak:**
 
 ```javascript
-const str = String.fromCharCode(100000);
+const bookTitle = "Savaş ve Barış";
+const italicBookTitle = bookTitle.italic();
 
-console.log(str); // NaN
+document.getElementsByTagName("h2")[0].innerHTML = italicBookTitle;
 ```
+
+**Özet:**
+
+| Özellik | Açıklama |
+|---|---|
+| **Amaç** | Bir metni italik yapmak. |
+| **Kullanım Alanları** | Metni vurgulamak, özel metinler oluşturmak, kitap isimleri ve alıntıları için metin oluşturmak |
+| **Çalışma Mantığı** | Bir metni HTML `<i>` etiketiyle sararak italik yapar. |
+
+**Ek Bilgiler:**
+
+* **italic()** metodu, CSS'nin `font-style` özelliğini kullanarak da yazı tipi stilini değiştirebilirsiniz.
+* **italic()** metodu, modern tarayıcılarda pek kullanılmamaktadır.
+
+**Karşılaştırma:**
+
+| Metod | Etki | HTML Etiketi |
+|---|---|---|
+| **big()** | Metni büyütmek ve kalınlaştırmak | `<big>` |
+| **small()** | Metni küçültmek | `<small>` |
+| **bold()** | Metni kalınlaştırmak | `<b>` |
+| **italic()** | Metni italik yapmak | `<i>` |
+
+Umarım bu bilgiler JavaScript'te **italic()** metodunu anlamanıza yardımcı olmuştur.

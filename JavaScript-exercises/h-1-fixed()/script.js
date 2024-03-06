@@ -1,10 +1,8 @@
-const text = "Merhaba Dünya!";
+// Bir öğeyi sabitlemek için position kullanımı
 
-// strikethrough() kullanımı
-const strikethroughText = text.strikethrough();
+const element = document.getElementById("my-element");
+element.style.position = "fixed";
 
-// textDecoration kullanımı
-const strikethroughText2 = text.style.textDecoration = "line-through";
+// Sayfa kaydırma çubuğunu kaydırmak için scrollTop kullanımı
 
-console.log(strikethroughText); // Yazdırır: "<strike>Merhaba Dünya!</strike>"
-console.log(strikethroughText2); // Yazdırır: "Merhaba Dünya!" (üzeri çizili olarak)
+window.scrollTo(0, 100); // Sayfayı 100 piksel yukarı kaydırır

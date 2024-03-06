@@ -1,44 +1,67 @@
-## JavaScript Dilinde anchor() Metodu
+## JavaScript Dilinde `switch`-`case`-`break` İfadeleri
 
-**anchor()** metodu, JavaScript'te **mevcut değildir**. 
+**switch**-**case**-**break** ifadeleri, JavaScript'te bir değişkenin değerine bağlı olarak farklı kod bloklarını çalıştırmak için kullanılır.
 
-**Benzer İşlev Gösteren Özellikler:**
+**Kullanım Alanları:**
 
-**1. document.getElementById():** Bir HTML elementini ID'sine göre seçmek için kullanılır.
+* Bir menü sisteminde seçilen seçeneğe göre farklı işlemler yapmak
+* Bir sayının değerine göre farklı kategorilere ayırmak
+* Bir metnin içeriğine göre farklı işlemler yapmak
 
-**2. document.querySelector():** Bir HTML elementini CSS seçicisine göre seçmek için kullanılır.
+**Çalışma Mantığı:**
 
-**3. element.scrollIntoView():** Bir HTML elementini görünür alana kaydırmak için kullanılır.
+* `switch` ifadesi, bir değişkenin değerini kontrol eder.
+* Her `case` ifadesi, değişkenin olası bir değerini temsil eder.
+* Değişkenin değeri bir `case` ifadesinin değeriyle eşleşirse, o `case` bloğundaki kod çalıştırılır.
+* `break` ifadesi, kodun bir `case` bloğundan çıkmasını sağlar.
 
 **Örnek:**
 
 ```javascript
-// Bir elemente ID'sine göre kaydırma
+const day = "Pazartesi";
 
-const element = document.getElementById("my-element");
-element.scrollIntoView();
-
-// Bir elemente CSS seçicisine göre kaydırma
-
-const element2 = document.querySelector(".my-element");
-element2.scrollIntoView();
+switch (day) {
+  case "Pazartesi":
+    console.log("Haftanın ilk günü!");
+    break;
+  case "Salı":
+    console.log("Haftanın ikinci günü.");
+    break;
+  case "Çarşamba":
+    console.log("Haftanın üçüncü günü.");
+    break;
+  default:
+    console.log("Geçersiz gün ismi!");
+}
 ```
+
+**Bu kodda:**
+
+* `day` değişkeni gün ismini temsil eder.
+* `switch` ifadesi, `day` değişkeninin değerini kontrol eder.
+* `Pazartesi`, `Salı` ve `Çarşamba` için farklı mesajlar yazdırılır.
+* `default` bloğu, `day` değişkeninin beklenen değerlerden biriyle eşleşmediğinde çalıştırılır.
 
 **Özet:**
 
-| Özellik | Etki | HTML Etiketi | CSS Özelliği |
-|---|---|---|---|
-| **document.getElementById()** | Bir HTML elementini ID'sine göre seçmek | `id="my-element"` | Yok |
-| **document.querySelector()** | Bir HTML elementini CSS seçicisine göre seçmek | `.my-element` | Yok |
-| **element.scrollIntoView()** | Bir HTML elementini görünür alana kaydırmak | Yok | Yok |
-
-**Not:**
-
-* **document.getElementById()** ve **document.querySelector()** fonksiyonları, bir HTML elementini seçmek için kullanılır.
-* **element.scrollIntoView()** fonksiyonu, seçilen elementi görünür alana kaydırmak için kullanılır.
+| Özellik | Etki | Örnek |
+|---|---|---|
+| **switch** | Bir değişkenin değerini kontrol eder | `switch (day)` |
+| **case** | Bir olası değeri temsil eder | `case "Pazartesi":` |
+| **break** | Bir case bloğundan çıkmayı sağlar | `break;` |
 
 **Ek Bilgiler:**
 
-* Yukarıdaki özelliklere ek olarak, `window.scrollTo()` fonksiyonunu da kullanabilirsiniz.
-* Scroll işlemleri hakkında daha fazla bilgi için JavaScript Scroll İşlemleri: [geçersiz URL kaldırıldı] sayfasına bakabilirsiniz.
+* Birden fazla `case` ifadesi aynı kod bloğunu çalıştırabilir.
+* `break` ifadesi isteğe bağlıdır. Kullanılmazsa, kod bir sonraki `case` bloğuna da geçer.
+* `switch`-`case`-`break` ifadeleri yerine `if`-`else` ifadeleri de kullanılabilir.
 
+**Daha Fazla Örnek:**
+
+* Bir sayının tek veya çift olduğunu kontrol etmek
+* Bir kullanıcının seçtiği ürünün fiyatını hesaplamak
+* Bir metnin hangi dilde yazıldığını belirlemek
+
+**Switch-Case İfadelerinin Önemi:**
+
+`switch`-`case`-`break` ifadeleri, kodun daha organize ve okunabilir olmasını sağlar. Bir değişkenin değerine bağlı olarak farklı işlemleri tek bir yerde toplayarak kodun daha kolay yönetilebilir hale gelmesini sağlar.

@@ -1,59 +1,64 @@
-## JavaScript Dilinde fromCharCode() Metodu
+## JavaScript Dilinde decodeURIComponent() Metodu
 
-**fromCharCode()** metodu, bir veya birden fazla Unicode kodundan bir dize oluşturmanızı sağlar.
+**decodeURIComponent()** metodu, URL'lerde kodlanmış bir bileşeni, orijinal dizesine dönüştürmenize olanak tanır.
 
 **Kullanım Alanları:**
 
-* Özel karakterler ve semboller oluşturmak
-* Metin işleme ve manipülasyonu
-* Uluslararası metinlerle çalışma
-* Kodlama ve şifreleme
+* URL parametrelerini çözmek
+* Form verilerini çözmek
+* URL'lerde özel karakterleri çözmek
+* Web API'lerinden gelen verileri çözmek
 
 **Çalışma Mantığı:**
 
-**fromCharCode()** metodu, parametre olarak verilen Unicode kodlarını bir dizeye dönüştürür. Her bir Unicode kodu, bir karaktere karşılık gelir.
+**decodeURIComponent()** metodu, "%xx" biçiminde kodlanmış karakterleri, orijinal karakterlerine dönüştürerek bir dizeyi çözer. Burada xx, karakterin ondalık kodunun onaltılık gösterimidir.
 
 **Detaylı Örnekler:**
 
-**1. Örnek:** Tek bir Unicode kodundan bir karakter oluşturmak
+**1. Örnek:** Bir URL parametresini çözmek
 
 ```javascript
-const char = String.fromCharCode(77);
+const encodedParam = "Merhaba%20D%C3%BCnya";
+const param = decodeURIComponent(encodedParam);
 
-console.log(char); // "M"
+console.log(param); // "Merhaba Dünya"
 ```
 
-Bu örnekte, **fromCharCode()** metodu 77 Unicode kodunu kullanarak "M" karakterini oluşturur.
+Bu örnekte, **encodedParam** değişkeni URL'de kodlanmış "Merhaba Dünya" metnini içerir. **decodeURIComponent()** metodu **encodedParam** üzerinde çalıştırılır ve "%xx" biçiminde kodlanmış karakterleri orijinal karakterlerine dönüştürerek çözer.
 
-**2. Örnek:** Birden fazla Unicode kodundan bir dize oluşturmak
+**2. Örnek:** Bir form veri değerini çözmek
 
 ```javascript
-const str = String.fromCharCode(65, 66, 67);
+const encodedValue = "Merhaba%20D%C3%BCnya%21";
+const formValue = decodeURIComponent(encodedValue);
 
-console.log(str); // "ABC"
+console.log(formValue); // "Merhaba Dünya!"
 ```
 
-Bu örnekte, **fromCharCode()** metodu 65, 66 ve 67 Unicode kodlarını kullanarak "ABC" dizesini oluşturur.
+Bu örnekte, **encodedValue** değişkeni URL'de kodlanmış "Merhaba Dünya!" metnini içerir. **decodeURIComponent()** metodu **encodedValue** üzerinde çalıştırılır ve "%xx" biçiminde kodlanmış karakterleri orijinal karakterlerine dönüştürerek çözer.
 
 **Ek Örnekler:**
 
 ```javascript
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const url = "https://www.example.com/?q=Merhaba%2520D%25C3%25BCnya";
 
-console.log(heart); // "♥"
-console.log(euro); // "€"
+const decodedUrl = decodeURIComponent(url);
+
+console.log(decodedUrl); // "https://www.example.com/?q=Merhaba Dünya"
 ```
 
 **Notlar:**
 
-* **fromCharCode()** metodu, parametre olarak verilen Unicode kodunun geçerli bir karakter olması gerekir. Geçersiz bir Unicode kodu verilirse, NaN değeri döndürülür.
-* **fromCharCode()** metodu, birden fazla parametre alırsa, parametreler sırayla bir dizeye dönüştürülür.
+* **decodeURIComponent()** metodu, "+" sembolünü boşluk karakterine dönüştürür.
+* **decodeURIComponent()** metodu, "%xx" biçiminde kodlanmamış karakterleri olduğu gibi bırakır.
 
-**Geçersiz Unicode kodu ile fromCharCode() örneği:**
+**Kodlanmamış karakterler örneği:**
 
 ```javascript
-const str = String.fromCharCode(100000);
+const encodedParam = "Merhaba%20Dünya!";
+const param = decodeURIComponent(encodedParam);
 
-console.log(str); // NaN
+console.log(param); // "Merhaba Dünya!"
 ```
+
+Umarım bu bilgiler JavaScript'te **decodeURIComponent()** metodunu anlamanıza yardımcı olmuştur.

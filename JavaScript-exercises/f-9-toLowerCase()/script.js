@@ -1,13 +1,11 @@
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const username1 = "johndoe";
+const username2 = "JohnDoe";
 
-document.write(heart); // "♥"
-document.write(euro); // "€"
+if (username1.toLowerCase() === username2.toLowerCase()) {
+  // Kullanıcı adları eşleşir.
+}
 
-const char = String.fromCharCode(77);
+const url = "HTTPS://WWW.EXAMPLE.COM/";
+const lowerCaseUrl = url.toLowerCase();
 
-document.write(char); // "M"
-
-const str = String.fromCharCode(65, 66, 67);
-
-document.write(str); // "ABC"
+console.log(lowerCaseUrl); // Yazdırır: "https://www.example.com/"

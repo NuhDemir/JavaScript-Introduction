@@ -1,59 +1,62 @@
-## JavaScript Dilinde fromCharCode() Metodu
+## JavaScript Dilinde encodeURIComponent() Metodu
 
-**fromCharCode()** metodu, bir veya birden fazla Unicode kodundan bir dize oluşturmanızı sağlar.
+**encodeURIComponent()** metodu, bir URL bileşenini, URL'lerde güvenli bir şekilde kullanılabilecek şekilde kodlamanıza olanak tanır.
 
 **Kullanım Alanları:**
 
-* Özel karakterler ve semboller oluşturmak
-* Metin işleme ve manipülasyonu
-* Uluslararası metinlerle çalışma
-* Kodlama ve şifreleme
+* URL parametrelerini kodlamak
+* Form verilerini kodlamak
+* URL'lerde özel karakterleri kodlamak
+* Web API'leri ile veri gönderme
 
 **Çalışma Mantığı:**
 
-**fromCharCode()** metodu, parametre olarak verilen Unicode kodlarını bir dizeye dönüştürür. Her bir Unicode kodu, bir karaktere karşılık gelir.
+**encodeURIComponent()** metodu, bir dizedeki karakterleri, URL'lerde güvenli olmayan karakterleri "%xx" biçiminde kodlayarak kodlar. Burada xx, karakterin ondalık kodunun onaltılık gösterimidir.
 
 **Detaylı Örnekler:**
 
-**1. Örnek:** Tek bir Unicode kodundan bir karakter oluşturmak
+**1. Örnek:** Bir URL parametresini kodlamak
 
 ```javascript
-const char = String.fromCharCode(77);
+const param = "Merhaba Dünya";
+const encodedParam = encodeURIComponent(param);
 
-console.log(char); // "M"
+console.log(encodedParam); // "Merhaba%20D%C3%BCnya"
 ```
 
-Bu örnekte, **fromCharCode()** metodu 77 Unicode kodunu kullanarak "M" karakterini oluşturur.
+Bu örnekte, **param** değişkeni "Merhaba Dünya" metnini içerir. **encodeURIComponent()** metodu **param** üzerinde çalıştırılır ve URL'de güvenli olmayan karakterleri "%xx" biçiminde kodlayarak kodlar.
 
-**2. Örnek:** Birden fazla Unicode kodundan bir dize oluşturmak
+**2. Örnek:** Bir form veri değerini kodlamak
 
 ```javascript
-const str = String.fromCharCode(65, 66, 67);
+const formValue = "Merhaba Dünya!";
+const encodedValue = encodeURIComponent(formValue);
 
-console.log(str); // "ABC"
+console.log(encodedValue); // "Merhaba%20D%C3%BCnya%21"
 ```
 
-Bu örnekte, **fromCharCode()** metodu 65, 66 ve 67 Unicode kodlarını kullanarak "ABC" dizesini oluşturur.
+Bu örnekte, **formValue** değişkeni "Merhaba Dünya!" metnini içerir. **encodeURIComponent()** metodu **formValue** üzerinde çalıştırılır ve URL'de güvenli olmayan karakterleri "%xx" biçiminde kodlayarak kodlar.
 
 **Ek Örnekler:**
 
 ```javascript
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const url = "https://www.example.com/?q=Merhaba%20D%C3%BCnya";
 
-console.log(heart); // "♥"
-console.log(euro); // "€"
+const encodedUrl = encodeURIComponent(url);
+
+console.log(encodedUrl); // "https%3A%2F%2Fwww.example.com%2F%3Fq%3DMerhaba%2520D%25C3%25BCnya"
 ```
 
 **Notlar:**
 
-* **fromCharCode()** metodu, parametre olarak verilen Unicode kodunun geçerli bir karakter olması gerekir. Geçersiz bir Unicode kodu verilirse, NaN değeri döndürülür.
-* **fromCharCode()** metodu, birden fazla parametre alırsa, parametreler sırayla bir dizeye dönüştürülür.
+* **encodeURIComponent()** metodu, boşluk karakterini "+" sembolüne dönüştürür.
+* **encodeURIComponent()** metodu, aşağıdaki karakterleri kodlamaz: `*` `-` `.` `_` `!` `~` `'` `(` `)` `$` `&` `+` `,` `/` `;` `=` `?` `@` `#`
 
-**Geçersiz Unicode kodu ile fromCharCode() örneği:**
+**Kodlanmayan karakterler örneği:**
 
 ```javascript
-const str = String.fromCharCode(100000);
+const param = "Merhaba Dünya!";
+const encodedParam = encodeURIComponent(param);
 
-console.log(str); // NaN
+console.log(encodedParam); // "Merhaba%20D%C3%BCnya!"
 ```

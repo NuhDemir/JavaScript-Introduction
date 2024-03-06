@@ -11,4 +11,4 @@ document.getElementById("quote").innerHTML = italicQuote;
 const text = "Merhaba Dünya!";
 const italicText = text.italic();
 
-console.log(italicText); // Yazdırır: "<i>Merhaba Dünya!</i>"
+document.write(italicText); // Yazdırır: "<i>Merhaba Dünya!</i>"

@@ -1,54 +1,55 @@
-## JavaScript Dilinde Ternary Operatörü
+## JavaScript Dilinde `while` Döngüsü
 
-Ternary operatörü, JavaScript'te **koşullu bir ifadeye bağlı olarak iki farklı değerden birini seçmek** için kullanılan bir kısaltmadır.
+**while** döngüsü, JavaScript'te bir kod bloğunu **bir koşul doğru olduğu sürece** tekrar tekrar çalıştırmak için kullanılır.
 
 **Kullanım Alanları:**
 
-* Basit koşullara bağlı olarak değer atama
-* Koşullu ifadeleri tek satırda yazma
-* Fonksiyonların dönüş değerlerini dinamik olarak belirleme
+* Tekrarlayan işlemleri gerçekleştirmek
+* Bir veri setini işlemek
+* Kullanıcıdan gelen girdiye göre işlemleri tekrarlamak
 
 **Çalışma Mantığı:**
 
-Ternary operatörü üç operanttan oluşur:
-
-* **Koşul:** Bir Boolean değeri döndüren bir ifade.
-* **Doğru Değer:** Koşul doğruysa döndürülen değer.
-* **Yanlış Değer:** Koşul yanlışsa döndürülen değer.
+* Döngü başlamadan önce, bir **koşul** değerlendirilir.
+* Koşul doğruysa, döngüdeki kod bloğu çalıştırılır.
+* Kod bloğu çalıştıktan sonra, koşul tekrar değerlendirilir.
+* Koşul yanlış olana kadar bu işlem devam eder.
 
 **Örnek:**
 
 ```javascript
-const age = 18;
+let counter = 1;
 
-const isAdult = age >= 18 ? "Yetişkin" : "Çocuk";
-
-console.log(isAdult); // "Yetişkin" yazdırır
+while (counter <= 5) {
+  console.log(counter);
+  counter++;
+}
 ```
 
 **Bu kodda:**
 
-* `age` değişkeni kullanıcının yaşını temsil eder.
-* Ternary operatörü, `age` değişkeninin 18'den büyük veya eşit olup olmadığını kontrol eder.
-* Koşul doğruysa, "Yetişkin" değeri, yanlışsa "Çocuk" değeri `isAdult` değişkenine atanır.
+* `counter` değişkeni 1'e atanır.
+* `while` döngüsünün koşulu, `counter` değişkeninin 5'ten küçük veya eşit olup olmadığını kontrol eder.
+* Koşul doğru olduğu sürece, `counter` değeri konsola yazdırılır ve 1 artırılır.
+* `counter` değişkeni 6 olduğunda, koşul yanlış hale gelir ve döngüden çıkılır.
 
 **Özet:**
 
 | Özellik | Etki | Örnek |
 |---|---|---|
-| **Ternary Operatörü** | Koşula bağlı olarak iki değerden birini seçer | `age >= 18 ? "Yetişkin" : "Çocuk"` |
+| **while** | Bir koşul doğru olduğu sürece kod bloğunu çalıştırır | `while (counter <= 5)` |
 
 **Ek Bilgiler:**
 
-* Ternary operatörü, `if`-`else` ifadelerine alternatif olarak kullanılabilir.
-* Ternary operatörü iç içe kullanılabilir.
+* `while` döngüsünün içinde `break` ifadesi kullanılarak döngüden erken çıkılabilir.
+* `continue` ifadesi kullanılarak döngünün bir sonraki yinelemesine geçilebilir.
 
 **Daha Fazla Örnek:**
 
-* Bir sayının tek veya çift olduğunu belirleme
-* Bir kullanıcının girişinin doğruluğunu kontrol etme
-* Bir fonksiyonun parametrelerine göre farklı işlemler yapma
+* Bir sayının faktöriyelini hesaplamak
+* Bir metindeki belirli bir karakteri bulmak
+* Bir oyun döngüsü oluşturmak
 
-**Ternary Operatörünün Önemi:**
+**While Döngüsünün Önemi:**
 
-Ternary operatörü, kodun daha kısa ve okunabilir olmasını sağlar. Basit koşullara bağlı olarak değer atama işlemlerini tek satırda yaparak kodun daha kompakt hale gelmesini sağlar.
+`while` döngüsü, tekrarlayan işlemleri kolayca gerçekleştirmek için kullanılır. Kodun daha az tekrarla daha fazla iş yapmasını sağlayarak kodun daha kompakt ve okunabilir hale gelmesini sağlar.

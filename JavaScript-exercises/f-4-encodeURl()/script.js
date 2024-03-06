@@ -1,13 +1,9 @@
-const heart = String.fromCharCode(9829);
-const euro = String.fromCharCode(8364);
+const param = "Merhaba Dünya!";
+const encodedParam = encodeURIComponent(param);
 
-document.write(heart); // "♥"
-document.write(euro); // "€"
+console.log(encodedParam); // "Merhaba%20D%C3%BCnya!"
+const url = "https://www.example.com/?q=Merhaba%20D%C3%BCnya";
 
-const char = String.fromCharCode(77);
+const encodedUrl = encodeURIComponent(url);
 
-document.write(char); // "M"
-
-const str = String.fromCharCode(65, 66, 67);
-
-document.write(str); // "ABC"
+console.log(encodedUrl); // "https%3A%2F%2Fwww.example.com%2F%3Fq%3DMerhaba%2520D%25C3%25BCnya"
