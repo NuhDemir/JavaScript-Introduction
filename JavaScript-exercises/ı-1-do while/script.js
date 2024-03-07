@@ -14,3 +14,5 @@ do {
 } while(i < 5);
 
 console.log(result);
+
+

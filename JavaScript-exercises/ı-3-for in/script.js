@@ -1,29 +1,20 @@
-// Hedef toplam
-const target = 9;
+const person = {
+  name: "John Doe",
+  age: 30,
+  city: "New York"
+};
 
-// Dizi
-const numbers = [2, 7, 11, 15];
+for (const property in person) {
+  console.log(`${property}: ${person[property]}`);
+}
 
-// Diziyi dolaşmak için bir sayaç
-let i = 0;
+var names = ["Arthur", "Klaus", "Matheus", "Dolor", "Gem"];
+console.log(names + "<br/>"); // Display the original array
 
-// While döngüsü, sayaç dizinin uzunluğundan küçük olduğu sürece devam eder
-while (i < numbers.length) {
-
-  // Sayaçtan sonraki her sayı için
-  for (let j = i + 1; j < numbers.length; j++) {
-
-    // İki sayının toplamı hedefe eşitse
-    if (numbers[i] + numbers[j] === target) {
-
-      // Bulunan sayıları konsola yazdır
-      console.log(`İki sayı bulundu: ${numbers[i]} ve ${numbers[j]}`);
-
-      // Döngüden çık
-      break;
-    }
+for (var i = 0; i < names.length; i++) {
+  if (names[i] === "Matheus") {
+    console.log("Matheus works in the printing house<br/>");
+  } else if (names[i] === "Klaus") {
+    console.log("Klaus works in the printing house<br/>");
   }
-
-  // Sayaç 1 artırılır
-  i++;
 }
