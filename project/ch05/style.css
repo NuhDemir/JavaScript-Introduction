@@ -1,0 +1,58 @@
+body {
+    background-color: #f8edeb;
+}
+
+/* Kartın genişliğini daha iyi uyum sağlaması için sınırlandırıyoruz */
+.card {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px 0px 25px 25px;
+    background-color: white; /* Kart arka plan rengi */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge efekti */
+    transition: transform 0.3s, box-shadow 0.3s; /* Geçiş efekti */
+}
+
+/* Kart üzerine gelindiğinde büyütme efekti */
+.card:hover {
+    transform: scale(1.02); /* Hafif büyütme efekti */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Hover durumunda daha belirgin gölge */
+}
+
+/* Daha küçük ekranlar için kart başlığının boyutunu küçültme */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Buton simgeleri için stil */
+.bx {
+    cursor: pointer;
+    margin: 20px;
+}
+
+/* Kart başlıkları için stil */
+.card-title {
+   background-color:#ffe5d9 ;
+    color: #FB9841; /* Başlık rengi */
+    font-weight: bold; /* Başlık kalınlığı */
+}
+
+/* Kart metinleri için stil */
+.card-text {
+    
+    color: #FB9841; /* Metin rengi */
+    line-height: 1.5; /* Satır yüksekliği */
+}
+
+.card-body{
+    background-color: #ffe5d9;
+}
+
+.card-link{
+    color: #FF7762;
+}
+
+.card-footer{
+    background-color: #FFD7C5;
+}
