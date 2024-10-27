@@ -1,0 +1,312 @@
+/* Genel Stiller */
+
+body {
+    background-color: #121212;
+    /* Arka plan rengi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: "Agdasima", sans-serif;
+    color: #ffffff;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.pinimg.com/736x/f1/2e/2a/f12e2a1c7e8393322f71358a79139436--jedi-sith-episode-vii.jpg') center/cover;
+    filter: blur(20px);
+    z-index: -1;
+    /* Arka plan resmi için blur efekti */
+}
+
+.container {
+    max-width: 90%;
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Ekran Stilleri */
+
+.screen {
+    background-color: #dedede;
+    /* Ekran rengi */
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+/* Koltuk Stilleri */
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+    /* Koltuk satırları arasındaki boşluk */
+}
+
+.seat {
+    background-color: #444;
+    /* Uygun koltuk rengi */
+    height: 40px;
+    width: 40px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1.2);
+    /* Fare imleci değişikliği */
+    transition: transform 0.2s, background-color 0.2s;
+    /* Geçiş efekti */
+}
+
+.seat.selected {
+    background-color: #ff6347;
+    /* Seçili koltuk rengi */
+}
+
+.seat.reserved {
+    background-color: #888;
+    /* Rezerve koltuk rengi */
+    cursor: not-allowed;
+    /* Tıklanamaz koltuk */
+}
+
+.seat:hover:not(.reserved) {
+    transform: scale(1.1);
+    /* Üzerine gelindiğinde büyüme efekti */
+    background-color: #555;
+    /* Üzerine gelindiğinde renk değişikliği */
+}
+
+
+/* Film Listesi Stilleri */
+
+.movie-list {
+    margin: 20px 0;
+    /* Film listesi için boşluk */
+}
+
+#movie {
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    /* Film seçimi için maksimum genişlik */
+    border-radius: 5px;
+    /* Kenar yuvarlama */
+    font-size: 16px;
+    /* Yazı boyutu */
+}
+
+
+/* Bilgi Efsunu Stilleri */
+
+.info {
+    display: flex;
+    justify-content: center;
+    /* Merkezde görüntüleme */
+    list-style: none;
+    /* Noktasız liste */
+    gap: 15px;
+    /* Elemanlar arası boşluk */
+    margin: 20px 0;
+    /* Üstte ve altta boşluk */
+    padding: 0;
+    /* Padding sıfırlama */
+}
+
+.info li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Elemanlar arası boşluk */
+}
+
+.info span {
+    font-size: 14px;
+    /* Yazı boyutu */
+}
+
+
+/* Bilet Bilgisi Stilleri */
+
+.ticket-info {
+    background-color: #333;
+    /* Arka plan rengi */
+    padding: 10px;
+    /* İç boşluk */
+    border-radius: 5px;
+    /* Kenar yuvarlama */
+    max-width: 300px;
+    /* Maksimum genişlik */
+    width: 100%;
+    /* Genişlik */
+    text-align: center;
+    /* Merkezde görüntüleme */
+}
+
+.ticket-info h5 {
+    margin: 0;
+    /* Kenar boşluğunu sıfırla */
+    font-size: 18px;
+    /* Başlık yazı boyutu */
+}
+
+.ticket-info p {
+    margin: 5px 0 0;
+    /* Üstte 5px alt boşluk */
+    color: #ff6347;
+    /* Yazı rengi */
+}
+
+
+/* Film Kartları Stilleri */
+
+.gallery {
+    display: flex;
+    /* Esnek kutu modeli */
+    overflow-x: scroll;
+    /* Yatay kaydırma */
+    gap: 20px;
+    /* Elemanlar arası boşluk */
+    padding: 10px;
+    /* İç boşluk */
+    scroll-behavior: smooth;
+    /* Kaydırma geçişi */
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+    /* Kaydırıcıyı gizle */
+}
+
+.movie-card {
+    flex: 0 0 auto;
+    /* Film kartları için esneme ayarı */
+    width: 250px;
+    /* Genişlik */
+    min-width: 250px;
+    /* Minimum genişlik */
+    height: 350px;
+    /* Yükseklik */
+    background-position: center;
+    /* Arka plan konumu */
+    background-size: cover;
+    /* Arka plan boyutu */
+    border-radius: 10px;
+    /* Kenar yuvarlama */
+    overflow: hidden;
+    /* Taşan içeriği gizle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+    /* Gölgelendirme */
+    color: white;
+    /* Yazı rengi */
+    display: flex;
+    /* Esnek kutu modeli */
+    align-items: flex-end;
+    /* Alttan hizalama */
+    transition: transform 0.3s ease;
+    /* Geçiş efekti */
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    /* Üzerine gelindiğinde büyüme efekti */
+}
+
+.card-content {
+    padding: 20px;
+    /* İç boşluk */
+    background: rgba(0, 0, 0, 0.6);
+    /* Arka plan rengi */
+    width: 100%;
+    /* Genişlik */
+    box-sizing: border-box;
+    /* Kutu boyutlama */
+}
+
+.card-content h1 {
+    font-size: 1.2em;
+    /* Başlık yazı boyutu */
+    margin: 0;
+    /* Kenar boşluğunu sıfırla */
+}
+
+.card-content span {
+    font-size: 0.9em;
+    /* Yazı boyutu */
+    display: block;
+    /* Blok elementi */
+    margin-top: 5px;
+    /* Üst boşluk */
+    color: #ff6347;
+    /* Yazı rengi */
+}
+
+.card-content p {
+    font-size: 0.85em;
+    /* Yazı boyutu */
+    margin: 10px 0;
+    /* Üst ve alt boşluk */
+}
+
+.watch {
+    background: #ff6347;
+    /* Buton arka plan rengi */
+    border: none;
+    /* Kenar yok */
+    border-radius: 5px;
+    /* Kenar yuvarlama */
+    padding: 8px 12px;
+    /* İç boşluk */
+    color: #fff;
+    /* Yazı rengi */
+    cursor: pointer;
+    /* Tıklanabilir göster */
+    text-transform: uppercase;
+    /* Büyük harf yap */
+    font-weight: bold;
+    /* Kalın yazı */
+    transition: background 0.3s;
+    /* Geçiş efekti */
+}
+
+.watch:hover {
+    background: #e55337;
+    /* Üzerine gelindiğinde renk değişikliği */
+}
+
+
+/* Duyarlı Tasarım */
+
+@media (max-width: 600px) {
+    .gallery {
+        gap: 10px;
+        /* Elemanlar arası boşluk */
+    }
+    .movie-card {
+        width: 200px;
+        /* Genişlik */
+        min-width: 200px;
+        /* Minimum genişlik */
+        height: 300px;
+        /* Yükseklik */
+    }
+}
