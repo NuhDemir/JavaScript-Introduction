@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Destructuring Örnekleri</h1>
+
+    <!-- 1. Array Destructuring -->
+    <div class="section">
+        <h2>Array Destructuring</h2>
+        <p>Bir array'den elemanları çıkarma örneği.</p>
+        <pre>
+let numbers = [1, 2, 3];
+let [first, second] = numbers;
+        </pre>
+        <button onclick="showArrayDestructuring()">Örneği Çalıştır</button>
+        <div id="output1" class="output"></div>
+    </div>
+
+    <!-- 2. Default Değerler -->
+    <div class="section">
+        <h2>Destructuring ile Default Değerler</h2>
+        <p>Array'den değer alırken varsayılan değer kullanma.</p>
+        <pre>
+let numbers = [1];
+let [first, second = 2] = numbers;
+        </pre>
+        <button onclick="showDefaultValues()">Örneği Çalıştır</button>
+        <div id="output2" class="output"></div>
+    </div>
+
+    <!-- 3. Nested Destructuring -->
+    <div class="section">
+        <h2>İç İçe Destructuring</h2>
+        <p>İç içe bir array'den değer çıkarma.</p>
+        <pre>
+let nestedArray = [1, [2, 3]];
+let [first, [second, third]] = nestedArray;
+        </pre>
+        <button onclick="showNestedDestructuring()">Örneği Çalıştır</button>
+        <div id="output3" class="output"></div>
+    </div>
+
+    <!-- 4. Object Destructuring -->
+    <div class="section">
+        <h2>Nesne Destructuring</h2>
+        <p>Nesneden değer çıkarma örneği.</p>
+        <pre>
+let person = { name: 'Ahmet', age: 30 };
+let { name, age } = person;
+        </pre>
+        <button onclick="showObjectDestructuring()">Örneği Çalıştır</button>
+        <div id="output4" class="output"></div>
+    </div>
+
+    <!-- 5. Object Destructuring ile Default Değerler -->
+    <div class="section">
+        <h2>Nesne Destructuring ile Default Değerler</h2>
+        <p>Nesneden değer alırken varsayılan değer kullanma.</p>
+        <pre>
+let person = { name: 'Ahmet' };
+let { name, age = 25 } = person;
+        </pre>
+        <button onclick="showObjectDefaultValues()">Örneği Çalıştır</button>
+        <div id="output5" class="output"></div>
+    </div>
+
+    <!-- 6. Nested Object Destructuring -->
+    <div class="section">
+        <h2>İç İçe Nesne Destructuring</h2>
+        <p>İç içe bir nesneden değer çıkarma.</p>
+        <pre>
+let person = { name: 'Ahmet', address: { city: 'İstanbul' } };
+let { address: { city } } = person;
+        </pre>
+        <button onclick="showNestedObjectDestructuring()">Örneği Çalıştır</button>
+        <div id="output6" class="output"></div>
+    </div>
+
+    <!-- 7. Function Parametrelerinde Destructuring -->
+    <div class="section">
+        <h2>Fonksiyon Parametrelerinde Destructuring</h2>
+        <p>Fonksiyon parametreleri ile destructuring kullanma.</p>
+        <pre>
+function greet({ name }) {
+    return 'Merhaba ' + name;
+}
+        </pre>
+        <button onclick="showFunctionDestructuring()">Örneği Çalıştır</button>
+        <div id="output7" class="output"></div>
+    </div>
+
+    <!-- 8. Destructuring ile Fonksiyon Dönüş Değerleri -->
+    <div class="section">
+        <h2>Fonksiyon Dönüş Değerlerinde Destructuring</h2>
+        <p>Fonksiyondan dönen nesneden değer çıkarma.</p>
+        <pre>
+function getPerson() {
+    return { name: 'Ahmet', age: 30 };
+}
+let { name } = getPerson();
+        </pre>
+        <button onclick="showFunctionReturnDestructuring()">Örneği Çalıştır</button>
+        <div id="output8" class="output"></div>
+    </div>
+
+    <!-- 9. Rest Operator ile Destructuring -->
+    <div class="section">
+        <h2>Rest Operator ile Destructuring</h2>
+        <p>Destructuring ile kalan elemanları alma.</p>
+        <pre>
+let numbers = [1, 2, 3, 4, 5];
+let [first, ...rest] = numbers;
+        </pre>
+        <button onclick="showRestDestructuring()">Örneği Çalıştır</button>
+        <div id="output9" class="output"></div>
+    </div>
+
+    <!-- 10. Destructuring ile Nested Array ve Object -->
+    <div class="section">
+        <h2>İç İçe Array ve Nesne Destructuring</h2>
+        <p>İç içe bir array ve nesneden değer çıkarma.</p>
+        <pre>
+let data = [{ name: 'Ahmet' }, { name: 'Ayşe' }];
+let [{ name: firstName }, { name: secondName }] = data;
+        </pre>
+        <button onclick="showNestedArrayObjectDestructuring()">Örneği Çalıştır</button>
+        <div id="output10" class="output"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
