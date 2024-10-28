@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiny5&display=swap"
+    rel="stylesheet">
+
+
+<body>
+
+    <h1>JavaScript Array Örnekleri</h1>
+
+    <!-- Array Örneği 1: Basit Array Tanımlama -->
+    <div class="section">
+        <h2>Array Tanımlama ve Eleman Ekleme</h2>
+        <p>Basit bir array oluşturma ve eleman ekleme örneği.</p>
+        <pre>
+let numbers = [1, 2, 3, 4, 5];
+        </pre>
+        <button onclick="showBasicArray()">Örneği Çalıştır</button>
+        <div id="output1" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 2: Array ile Döngü Kullanımı -->
+    <div class="section">
+        <h2>Array Döngü Kullanımı</h2>
+        <p>Array içindeki elemanları döngü ile yazdırma.</p>
+        <pre>
+let fruits = ["Elma", "Armut", "Muz"];
+fruits.forEach((fruit) => console.log(fruit));
+        </pre>
+        <button onclick="showLoopArray()">Örneği Çalıştır</button>
+        <div id="output2" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 3: Array'de Push ve Pop -->
+    <div class="section">
+        <h2>Array'de Push ve Pop Metodu</h2>
+        <p>Array'e eleman eklemek ve çıkarmak için push ve pop metodunu kullanma.</p>
+        <pre>
+let cities = ["İstanbul", "Ankara", "İzmir"];
+cities.push("Bursa");
+cities.pop();
+        </pre>
+        <button onclick="showPushPopArray()">Örneği Çalıştır</button>
+        <div id="output3" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 4: Array Map Kullanımı -->
+    <div class="section">
+        <h2>Array Map Metodu</h2>
+        <p>Map metodu ile array elemanlarının değiştirilmesi.</p>
+        <pre>
+let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(x => x * x);
+        </pre>
+        <button onclick="showMapArray()">Örneği Çalıştır</button>
+        <div id="output4" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 5: Array Filter Kullanımı -->
+    <div class="section">
+        <h2>Array Filter Metodu</h2>
+        <p>Filter metodu ile array'den belirli elemanları filtreleme.</p>
+        <pre>
+let ages = [15, 21, 18, 30, 17];
+let adults = ages.filter(age => age >= 18);
+        </pre>
+        <button onclick="showFilterArray()">Örneği Çalıştır</button>
+        <div id="output5" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 6: Array Reduce Kullanımı -->
+    <div class="section">
+        <h2>Array Reduce Metodu</h2>
+        <p>Reduce metodu ile array elemanlarının toplamını hesaplama.</p>
+        <pre>
+let numbers = [1, 2, 3, 4, 5];
+let sum = numbers.reduce((acc, num) => acc + num, 0);
+        </pre>
+        <button onclick="showReduceArray()">Örneği Çalıştır</button>
+        <div id="output6" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 7: Array'de Sort Kullanımı -->
+    <div class="section">
+        <h2>Array Sort Metodu</h2>
+        <p>Sort metodu ile array elemanlarının sıralanması.</p>
+        <pre>
+let names = ["Zeynep", "Ali", "Ayşe", "Hakan"];
+names.sort();
+        </pre>
+        <button onclick="showSortArray()">Örneği Çalıştır</button>
+        <div id="output7" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 8: Array Join Kullanımı -->
+    <div class="section">
+        <h2>Array Join Metodu</h2>
+        <p>Join metodu ile array elemanlarının birleştirilmesi.</p>
+        <pre>
+let words = ["Merhaba", "Dünya"];
+let sentence = words.join(" ");
+        </pre>
+        <button onclick="showJoinArray()">Örneği Çalıştır</button>
+        <div id="output8" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 9: Array Splice Kullanımı -->
+    <div class="section">
+        <h2>Array Splice Metodu</h2>
+        <p>Splice metodu ile array'e eleman ekleme veya çıkarma.</p>
+        <pre>
+let colors = ["Kırmızı", "Mavi", "Yeşil"];
+colors.splice(1, 1, "Sarı");
+        </pre>
+        <button onclick="showSpliceArray()">Örneği Çalıştır</button>
+        <div id="output9" class="output"></div>
+    </div>
+
+    <!-- Array Örneği 10: Array Concat Kullanımı -->
+    <div class="section">
+        <h2>Array Concat Metodu</h2>
+        <p>Concat metodu ile array'leri birleştirme.</p>
+        <pre>
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+let combinedArray = array1.concat(array2);
+        </pre>
+        <button onclick="showConcatArray()">Örneği Çalıştır</button>
+        <div id="output10" class="output"></div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

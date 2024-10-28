@@ -1,0 +1,57 @@
+body {
+    font-family: "Tiny5", serif;
+    color: #f4d03f;
+    background-color: #2a354e;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    color: #8e97e9;
+    text-shadow: 2px 2px #34495e;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #34495e;
+    background-color: #5d6d7e;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px #1c2833;
+}
+
+
+/* Retro buton stili */
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f39c12;
+    color: #2c3e50;
+    border: 2px solid #ec7063;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #1c2833;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+
+/* Çıktılar için retro stil */
+
+.output {
+    color: #f4d03f;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 10px;
+    text-shadow: 1px 1px #34495e;
+}
