@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course App</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@687&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Course App</h1>
+        <hr>
+        <div class="row">
+            <!--Form-->
+            <div class="col-md-5">
+                <form id="new-course">
+                    <!--Course-Title-->
+                    <div class="form-group">
+                        <label for="title">Course Title</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <!--Instructor-->
+                    <div class="form-group">
+                        <label for="instructor">Instructor</label>
+                        <input type="text" class="form-control" id="instructor">
+                    </div>
+                    <!--Image-->
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="text" class="form-control" id="image">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Save</button>
+
+                </form>
+            </div>
+            <br>
+            <!--End-Form-->
+            <!--Table-->
+            <div class="col-md-7">
+                <table class="table table-hover table,striped">
+
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Instructor</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="course-list"></tbody>
+                </table>
+
+
+            </div>
+            <!--End-Table-->
+        </div>
+
+
+        <!-- Main JavaScript -->
+        <script src="appES5.js"></script>
+        <script src="appES6.js"></script>
+        <!-- Bootstrap5 JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
