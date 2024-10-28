@@ -5,56 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Asmaca</title>
-    <!--Fonts-->
+
+    <!-- Google Fonts bağlantıları -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Tiny5&display=swap" rel="stylesheet">
 
-    <!--CSS-->
+    <!-- Dış CSS dosyasının bağlantısı -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Başlık ve alt başlık -->
     <h1>Adam Asmaca</h1>
     <p>Gizlenmiş kelimeyi bulabilecek misin?</p>
+
+    <!-- Oyun bileşenlerinin bulunduğu ana kapsayıcı -->
     <div class="container">
+
+
+
+        <!-- Adam Asmaca çizimi için SVG grafiği -->
         <svg height="250" width="250" class="graphic">
-            <!--Sehpa-->
+            <!-- Sehpa çizimi -->
             <line x1="50" y1="20" x2="130" y2="20"></line>
             <line x1="130" y1="20" x2="130" y2="50"></line>
             <line x1="50" y1="20" x2="50" y2="250"></line>
             <line x1="10" y1="250" x2="90" y2="250"></line>
 
-            <!--Head-->
+            <!-- Kafa -->
             <circle cx="130" cy="70" r="20" class="item"></circle>
-            <!--body-->
+
+            <!-- Gövde -->
             <line x1="130" y1="90" x2="130" y2="170" class="item"></line>
 
-            <!--kol-->
+            <!-- Kollar -->
             <line x1="130" y1="120" x2="100" y2="100" class="item"></line>
             <line x1="130" y1="120" x2="160" y2="100" class="item"></line>
 
-            <!--bacaklar-->
+            <!-- Bacaklar -->
             <line x1="130" y1="170" x2="100" y2="190" class="item"></line>
             <line x1="130" y1="170" x2="160" y2="190" class="item"></line>
-
-
         </svg>
 
+        <!-- Hatalı harflerin gösterildiği alan -->
         <div id="wrong-letters">
             <h3>Hatalı harfler</h3>
-            <span>a,b,c</span>
+            <span></span>
         </div>
 
+        <!-- Gizlenmiş kelimenin gösterileceği alan -->
         <div id="word">
-            <div class="letter">w</div>
-            <div class="letter">l</div>
-            <div class="letter">a</div>
-            <div class="letter">n</div>
+        </div>
+
+        <!-- Kazanıldığında açılan pop-up alanı -->
+        <div id="popup-container">
+            <div class="popup">
+                <h2 id="success-message">
+                    Kazandınız.
+                </h2>
+                <!-- Tekrar oyna butonu -->
+                <button id="play-again">Tekrar Oyna</button>
+            </div>
+        </div>
+
+        <!-- Harfin daha önce kullanıldığını belirten mesaj alanı -->
+        <div id="message" class="message">
+            <p>Bu harfi kullandınız</p>
         </div>
     </div>
 
-    <!--JavaScript-->
+    <!-- JavaScript dosyasının bağlantısı -->
     <script src="main.js"></script>
 </body>
 
