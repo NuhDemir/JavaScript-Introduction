@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Arrow Fonksiyonları Kılavuzu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiny5&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Retro tema renkleri ve font */
+
+        body {
+            font-family: "Tiny5", serif;
+            color: #f4d03f;
+            background-color: #2c3e50;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #ec7063;
+            text-shadow: 2px 2px #34495e;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #34495e;
+            background-color: #5d6d7e;
+            border-radius: 8px;
+            box-shadow: 3px 3px 6px #1c2833;
+        }
+
+        /* Retro buton stili */
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #f39c12;
+            color: #2c3e50;
+            border: 2px solid #ec7063;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px #1c2833;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #d35400;
+            transform: scale(1.05);
+        }
+
+        /* Çıktılar için retro stil */
+
+        .output {
+            color: #f4d03f;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 10px;
+            text-shadow: 1px 1px #34495e;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Arrow Fonksiyonları</h1>
+
+    <!-- Bölüm 1: Temel Arrow Fonksiyonu -->
+    <div class="section">
+        <h2>1. Temel Arrow Fonksiyonu</h2>
+        <p>Arrow fonksiyonları, fonksiyon tanımlamayı daha basit bir sözdizimi ile yapmamızı sağlar. Örneğin:</p>
+        <pre>const greet = name => "Merhaba, " + name;</pre>
+        <button onclick="showBasicArrow()">Örneği Çalıştır</button>
+        <div id="output1" class="output"></div>
+    </div>
+
+    <!-- Bölüm 2: Tek Parametre ile Arrow Fonksiyonu -->
+    <div class="section">
+        <h2>2. Tek Parametre ile Arrow Fonksiyonu</h2>
+        <p>Arrow fonksiyonunun tek parametresi varsa, parantezler isteğe bağlıdır:</p>
+        <pre>const square = num => num * num;</pre>
+        <button onclick="showSingleParam()">Örneği Çalıştır</button>
+        <div id="output2" class="output"></div>
+    </div>
+
+    <!-- Bölüm 3: Parametresiz Arrow Fonksiyonu -->
+    <div class="section">
+        <h2>3. Parametresiz Arrow Fonksiyonu</h2>
+        <p>Eğer parametre yoksa, boş parantezler kullanılır:</p>
+        <pre>const sayHello = () => "Merhaba, dünya!";</pre>
+        <button onclick="showNoParam()">Örneği Çalıştır</button>
+        <div id="output3" class="output"></div>
+    </div>
+
+    <!-- Bölüm 4: Blok Gövde ile Arrow Fonksiyonu -->
+    <div class="section">
+        <h2>4. Blok Gövde ile Arrow Fonksiyonu</h2>
+        <p>Birden fazla deyim varsa, süslü parantezler ve <code>return</code> anahtar kelimesi kullanılır:</p>
+        <pre>const multiplyAndLog = (a, b) => {
+    const result = a * b;
+    return result;
+};</pre>
+        <button onclick="showBlockBody()">Örneği Çalıştır</button>
+        <div id="output4" class="output"></div>
+    </div>
+
+    <script>
+        // Temel Arrow Fonksiyonu Örneği için Fonksiyon
+        function showBasicArrow() {
+            const greet = name => "Merhaba, " + name;
+            document.getElementById("output1").textContent = greet("Alice");
+        }
+
+        // Tek Parametre Arrow Fonksiyonu Örneği için Fonksiyon
+        function showSingleParam() {
+            const square = num => num * num;
+            document.getElementById("output2").textContent = "4'ün karesi: " + square(4);
+        }
+
+        // Parametresiz Arrow Fonksiyonu Örneği için Fonksiyon
+        function showNoParam() {
+            const sayHello = () => "Merhaba, dünya!";
+            document.getElementById("output3").textContent = sayHello();
+        }
+
+        // Blok Gövde Arrow Fonksiyonu Örneği için Fonksiyon
+        function showBlockBody() {
+            const multiplyAndLog = (a, b) => {
+                const result = a * b;
+                return result;
+            };
+            document.getElementById("output4").textContent = "3 * 5 = " + multiplyAndLog(3, 5);
+        }
+    </script>
+</body>
+
+</html>
