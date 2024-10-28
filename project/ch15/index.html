@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Destructuring Örnekleri</h1>
+
+    <!-- 1. Array Destructuring -->
+    <div class="section">
+        <h2>Array Destructuring</h2>
+        <p>
+            JavaScript'te destructuring, bir dizi veya nesnenin elemanlarını ayrı değişkenlere atamak için kullanılan
+            bir sözdizimidir. Bu işlem, kodun daha okunabilir ve daha temiz olmasını sağlar.
+        </p>
+    </div>
+
+    <!-- 2. Temel Kullanım -->
+    <div class="section">
+        <h2>Temel Kullanım</h2>
+        <p>
+            Array destructuring kullanımı oldukça basittir. Bir dizi oluşturup, destructuring kullanarak elemanlarını
+            ayrı değişkenlere atayabiliriz.
+        </p>
+        <pre><code>
+const array = [1, 2, 3];
+const [first, second, third] = array;
+console.log(first);  // 1
+console.log(second); // 2
+console.log(third);  // 3
+    </code></pre>
+    </div>
+
+    <!-- 3. Varsayılan Değerler -->
+    <div class="section">
+        <h2>Varsayılan Değerler</h2>
+        <p>
+            Dizi destructuring'de varsayılan değerler kullanarak, eğer dizi içindeki elemanlar tanımlanmadıysa bu
+            değerlerin kullanılmasını sağlayabiliriz.
+        </p>
+        <pre><code>
+const array = [1];
+const [first, second = 2] = array;
+console.log(first);  // 1
+console.log(second); // 2
+    </code></pre>
+    </div>
+
+    <!-- 4. İleri Düzey Kullanım -->
+    <div class="section">
+        <h2>İleri Düzey Kullanım</h2>
+        <p>
+            Dizi destructuring, bir dizi içindeki elemanları birden fazla değişkene atamak için de kullanılabilir.
+            Ayrıca, dizi parçalarının atlanması da mümkündür.
+        </p>
+        <pre><code>
+const array = [1, 2, 3, 4, 5];
+const [first, , third] = array; // ikinci eleman atlandı
+console.log(first); // 1
+console.log(third); // 3
+    </code></pre>
+    </div>
+
+    <!-- 5. Fonksiyonlarla Kullanım -->
+    <div class="section">
+        <h2>Fonksiyonlarla Kullanım</h2>
+        <p>
+            Destructuring, fonksiyonların argümanlarını daha etkili bir şekilde yönetmek için de kullanılabilir. Bir
+            fonksiyona bir dizi gönderdiğimizde, dizinin elemanlarını direkt olarak destructuring ile alabiliriz.
+        </p>
+        <pre><code>
+function getCoordinates() {
+    return [10, 20];
+}
+const [x, y] = getCoordinates();
+console.log(x); // 10
+console.log(y); // 20
+    </code></pre>
+    </div>
+
+    <!-- 6. Sonuç -->
+    <div class="section">
+        <h2>Sonuç</h2>
+        <p>
+            Array destructuring, JavaScript'te dizileri ve nesneleri daha verimli bir şekilde yönetmek için kullanışlı
+            bir özelliktir. Kodun okunabilirliğini artırır ve değişken atamalarını kolaylaştırır.
+        </p>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
