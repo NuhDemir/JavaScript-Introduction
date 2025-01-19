@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Öğrenme Platformu</title>
+    <script src="main.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .lesson-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .lesson-card h3 {
+            color: #202124;
+            margin-bottom: 10px;
+        }
+
+        .lesson-card p {
+            color: #5f6368;
+            line-height: 1.5;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background-color: #1a73e8;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px 0;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>JavaScript Öğrenme Platformu</h1>
+            <p>Modern ve interaktif JavaScript dersleri</p>
+        </header>
+
+        <main class="content-grid">
+            <div class="lesson-card">
+                <h3>Temel JavaScript Kavramları</h3>
+                <p>Değişkenler, veri tipleri ve operatörler hakkında temel bilgiler.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 20%"></div>
+                </div>
+            </div>
+
+            <div class="lesson-card">
+                <h3>Fonksiyonlar ve Scope</h3>
+                <p>JavaScript'te fonksiyonlar ve kapsam kavramını öğrenin.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="lesson-card">
+                <h3>DOM Manipülasyonu</h3>
+                <p>Web sayfalarını JavaScript ile dinamik hale getirme.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="lesson-card">
+                <h3>Asenkron JavaScript</h3>
+                <p>Promise'ler, async/await ve AJAX kavramları.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="score.js"></script>
+
+</html>
