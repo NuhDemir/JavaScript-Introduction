@@ -1,3 +1,4 @@
+"use Strict";
 // let inputYear = "2000";
 // console.log(Number(inputYear), inputYear);
 // console.log(Number(inputYear) * 2);
