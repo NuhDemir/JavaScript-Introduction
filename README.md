@@ -1,5 +1,7 @@
 <img src="img\javascript-3-256.png" alt="JavaScript" >
 
+![Javascript Introduction](https://github.com/NuhDemir/JavaScript-Introduction/blob/main/img/javascript-3-256.png?raw=true)
+
 # JavaScript Hakkında Bilinmesi Gerekenler
 
 
